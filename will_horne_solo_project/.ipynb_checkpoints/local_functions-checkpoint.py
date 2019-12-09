@@ -314,7 +314,6 @@ def data_display(df_to_graph, g_title, g_list, use_init=False):
         os.mkdir('graphs')
     file_path = './graphs/' + pic_title
     plt.savefig(file_path)
-    
     plt.show()
     
     
