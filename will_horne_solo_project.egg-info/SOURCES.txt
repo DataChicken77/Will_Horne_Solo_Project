@@ -1,0 +1,8 @@
+README.md
+setup.py
+will_horne_solo_project/__init__.py
+will_horne_solo_project/local_functions.py
+will_horne_solo_project.egg-info/PKG-INFO
+will_horne_solo_project.egg-info/SOURCES.txt
+will_horne_solo_project.egg-info/dependency_links.txt
+will_horne_solo_project.egg-info/top_level.txt
