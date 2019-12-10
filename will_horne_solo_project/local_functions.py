@@ -6,7 +6,6 @@ import statsmodels.api as sm
 from sklearn.preprocessing import PolynomialFeatures
 import os
 
-# Function storage during debug cycle.
 def trim_excel(df_to_trim, cut_points, set_sel):
     
     """
