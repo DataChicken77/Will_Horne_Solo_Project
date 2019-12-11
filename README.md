@@ -15,13 +15,43 @@ I plan to accomplish these goals through the following steps:
 * Graph and display data in a logical, human-readable format
 * Present findings in an orderly manner (Jupyter Notebook)
 
+## Module Installation:
+
+The functions described below are found in four modules located in the ![/will_horne_solo_project](https://github.com/DataChicken77/Will_Horne_Solo_Project/tree/master/will_horne_solo_project) subdirectory, labeled `clean.py`, `extract.py`, `display.py`, and `process.py`.  They will work only for Microsoft Excel files formatted like the picture below.  To use the functions, either install the modules in the directory you will be working in or a separate directory.  Before executing the functions, import the following modules:
+
+`import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import math
+import statsmodels.api as sm
+from sklearn.preprocessing import PolynomialFeatures
+import os`
+
+If you installed the project-specific modules into your working directory, add the following code:
+
+`import extract as extr
+import clean as cln
+import display as disp
+import process as proc`
+
+If the modules are in a different directory, use the following code to import them:
+
+`cwd = os.getcwd()
+mod_loc = '/path/to/project-specific-modules/directory'
+os.chdir(mod_loc)
+import extract as extr
+import clean as cln
+import display as disp
+import process as proc
+os.chdir(cwd)`
+
 ## Reading Excel into Pandas DataFrame:
 
 All Excel files containing my research data are formatted in the pattern displayed below:
 
 ![alt text](https://github.com/DataChicken77/class_project/blob/master/pictures/data_file_example.JPG "Data File Example")
 
-To start the build of my main function, `analyze_cfu_counts()`, I used a simple `pd.read_excel()` function to import the data into `master_df`.  However, I had to build a data file storage directory (IR_Datasets) to help organize the raw data.  Also, I added additional constraints to `read_excel()` to set ‘Over’ and ‘Contaminant’ as Nan values; it’s good to have a record of these values in the raw data, but they aren’t required in the actual data analysis.
+To start the build of my main function, `analyze_cfu_counts()`, I used the `pd.read_excel()` function to import the data into `master_df`.  However, I had to build a data file storage directory (IR_Datasets) to help organize the raw data.  Also, I added additional constraints to `read_excel()` to set ‘Over’ and ‘Contaminant’ as Nan values; it’s good to have a record of these values in the raw data, but they aren’t required in the actual data analysis.
 
 As an aside, I originally built this script with a `request_file()` function that would generate a GUI for the user to select a file for analysis.  When I turned my main code into a function (`analyze_cfu_count()`), I no longer needed this prompt; however, `request_file()` is still available if needed in a future version.
 
