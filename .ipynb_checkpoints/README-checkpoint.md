@@ -38,7 +38,7 @@ import will_horne_solo_project as whs
 input_file = 'path_to_excel.xls'
 sc_init, sc_zero, sc_name = whs.analyze_cfu_counts(input_file, 0.1)
 
-whs.gen_plots(ab_init, ab_zero, ab_name)
+whs.gen_plots(sc_init, sc_zero, sc_name)
 ```
 
 ![alt text](https://github.com/DataChicken77/Will_Horne_Solo_Project/blob/master/notebooks/graphs/Effects_of_Freezing_on_S._cerevisiae_EXF-6761_IR_Survival.png "Output Graph Example")
