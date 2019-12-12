@@ -51,9 +51,9 @@ All Excel files containing my research data are formatted in the pattern display
 
 ![alt text](https://github.com/DataChicken77/class_project/blob/master/pictures/data_file_example.JPG "Data File Example")
 
-To start the build of my main function, `analyze_cfu_counts()`, I used the `pd.read_excel()` function to import the data into `master_df`.  However, I had to build a data file storage directory (IR_Datasets) to help organize the raw data.  Also, I added additional constraints to `read_excel()` to set ‘Over’ and ‘Contaminant’ as Nan values; it’s good to have a record of these values in the raw data, but they aren’t required in the actual data analysis.
+To start the build of my main function, `analyze_cfu_counts()`, I used the `pd.read_excel()` function to import the data into `master_df`.  However, I added additional constraints to `read_excel()` to set ‘Over’ and ‘Contaminant’ as Nan values; it’s good to have a record of these values in the raw data, but they aren’t required in the actual data analysis.
 
-As an aside, I originally built this script with a `request_file()` function that would generate a GUI for the user to select a file for analysis.  When I turned my main code into a function (`analyze_cfu_count()`), I no longer needed this prompt; however, `request_file()` is still available if needed in a future version.
+As an aside, I originally built this script with a `request_file()` function that would generate a GUI for the user to select a file for analysis.  When I turned my main code into a function (`analyze_cfu_counts()`), I no longer needed this prompt; however, `request_file()` is still available if needed in a future version.
 
 ## Format and Tidy DataFrame:
 
