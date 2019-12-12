@@ -15,41 +15,35 @@ I plan to accomplish these goals through the following steps:
 * Graph and display data in a logical, human-readable format
 * Present findings in an orderly manner (Jupyter Notebook)
 
-## Module Installation:
+## Installation instructions
 
-The functions described below are found in four modules located in the [/will_horne_solo_project](https://github.com/DataChicken77/Will_Horne_Solo_Project/tree/master/will_horne_solo_project) subdirectory, labeled `clean.py`, `extract.py`, `display.py`, and `process.py`.  They will work only for Microsoft Excel files formatted like the picture below.  To use the functions, either install the modules in the directory you will be working in or a separate directory.  Before executing the functions, import the following modules:
++ Install the conda packaging manager
 
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-import math
-import statsmodels.api as sm
-from sklearn.preprocessing import PolynomialFeatures
-import os
++ Run the following commands in bash:
+
+```
+conda create -n solo_pro python=3 pip
+git clone https://github.com/DataChicken77/Will_Horne_Solo_Project.git
+cd Will_Horne_Solo_Project
+pip install -e .
 ```
 
-If you installed the project-specific modules into your working directory, add the following code:
 
-```python
-import extract as extr
-import clean as cln
-import display as disp
-import process as proc
+## Usage
+
+
+```
+import will_horne_solo_project as whs
+
+input_file = 'path_to_excel.xls'
+sc_init, sc_zero, sc_name = whs.analyze_cfu_counts(input_file, 0.1)
+
+whs.gen_plots(ab_init, ab_zero, ab_name)
 ```
 
-If the modules are in a different directory, use the following code to import them:
+![alt text](https://github.com/DataChicken77/Will_Horne_Solo_Project/blob/master/notebooks/graphs/Effects_of_Freezing_on_S._cerevisiae_EXF-6761_IR_Survival.png "Output Graph Example")
 
-```python
-cwd = os.getcwd()
-mod_loc = '/path/to/project-specific-modules/directory'
-os.chdir(mod_loc)
-import extract as extr
-import clean as cln
-import display as disp
-import process as proc
-os.chdir(cwd)
-```
+...
 
 ## Reading Excel into Pandas DataFrame:
 
