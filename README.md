@@ -84,3 +84,17 @@ As part of our lab's initial analysis of the data, we noted that plate counts ta
 I realized that, for my results and analysis, I would need to have modularity at the condition set level so I could compare different condition sets directly.  I developed `data_display()` to help specify what condition sets went onto each individual graph.  By passing in a list of condition sets (‘Condition’ and ‘Temp’ values in list format) with a processed data frame and a graph title, `data_display()` generated a scatter plot of data points, error bars for each data point, and a regression curve (linear or quadratic) to fit the data, for each condition set passed.  To generate the regression curves, I used functions from the `statsmodels` and `sklearn` python packages.
 
 I also knew, however, that I would have some standardized presentation methods I would use across each microorganism.  I set up `gen_plots()` to create this standardize set of figures, plotting aqueous vs. aqueous frozen, desiccated vs. desiccated frozen, and all four conditions together.  I also graphed a zoomed-in version of all four conditions from the init processed data sets to demonstrate any change in CFU concentrations caused solely by the acts of freezing or desiccation.
+
+## References/Resources Used:
+
+"pandas 0.25.3 documentation." *pandas: powerful Python data analysis toolkit.* https://pandas.pydata.org/pandas-docs/stable/index.html. Copyright (c) 2008-2012, AQR Capital Management, LLC, Lambda Foundry, Inc. and PyData Development Team. All rights reserved.
+
+Hunter, JD. "Matplotlib: A 2D Graphics Environment." *Computing in Science & Engineering,* vol. 9, no. 3, pp. 90-95, 2007.  Reference at https://matplotlib.org/index.html.
+
+"NumPy."  https://numpy.org/index.html.  Copyright © 2005-2019, NumPy Developers.  All rights reserved.
+
+Seabold, Skipper, and Josef Perktold. “Statsmodels: Econometric and statistical modeling with python.” *Proceedings of the 9th Python in Science Conference.* 2010.  Reference at https://www.statsmodels.org/stable/index.html.
+
+Pedregosa et al. "Scikit-learn: Machine Learning in Python." *JMLR* 12, pp. 2825-2830, 2011.  Reference at https://scikit-learn.org/stable/index.html.
+
+Too many "Stack Overflow" articles to count.  https://stackoverflow.com/.
