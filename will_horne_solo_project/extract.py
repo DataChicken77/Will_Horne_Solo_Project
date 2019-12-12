@@ -6,9 +6,9 @@ import statsmodels.api as sm
 from sklearn.preprocessing import PolynomialFeatures
 import os
 
-import clean as cln
-import display as disp
-import process as proc
+import will_horne_solo_project.clean as cln
+import will_horne_solo_project.display as disp
+import will_horne_solo_project.process as proc
 
 def csv_export(df_to_export, norm_term, strain_info):
     

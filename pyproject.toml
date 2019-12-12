@@ -6,6 +6,10 @@ authors = ["William Horne <55260697+DataChicken77@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
+sklearn = "^0.0"
+matplotlib = "^3.1.2"
+statsmodels = "^0.10.2"
+pandas = "^0.25.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
