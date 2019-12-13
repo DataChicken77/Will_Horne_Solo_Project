@@ -49,7 +49,7 @@ whs.gen_plots(sc_init, sc_zero, sc_name)
 
 All Excel files containing my research data are formatted in the pattern displayed below:
 
-![alt text](https://github.com/DataChicken77/class_project/blob/master/pictures/data_file_example.JPG "Data File Example")
+![alt text](https://github.com/DataChicken77/Will_Horne_Solo_Project/blob/master/IR_Datasets/data_file_example.JPG "Data File Example")
 
 To start the build of my main function, `analyze_cfu_counts()`, I used the `pd.read_excel()` function to import the data into `master_df`.  However, I added additional constraints to `read_excel()` to set ‘Over’ and ‘Contaminant’ as Nan values; it’s good to have a record of these values in the raw data, but they aren’t required in the actual data analysis.
 
